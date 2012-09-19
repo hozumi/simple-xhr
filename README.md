@@ -5,7 +5,7 @@ A ClojureScript library designed to make a simple ajax request.
 ## Usage
 
 ```clojure
-[simple-xhr "0.1.0"]
+[simple-xhr "0.1.1"]
 ```
 
 ```clojure
