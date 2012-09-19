@@ -13,7 +13,7 @@ A ClojureScript library designed to make a simple ajax request.
   (:require [simple-xhr :as sxhr]))
 
 (sxhr/request
-  "/api/messages" "/api/messages"
+  :url "/api/messages"
   :method "POST"
   :json {:title "hello" :body "world"}
   :complete
