@@ -41,10 +41,10 @@
   Other allowable keyword arguments are `:method`, `:content`, `:headers`,
   `:priority`, and `:retries`. `:method` defaults to \"GET\" and `:retries`
   defaults to `0`."
-  [id url & {:keys [method content json headers priority retries
-                    complete success error complete-after]
-             :or   {method   "GET"
-                    retries  0}}]
+  [& {:keys [url id method content json headers priority retries
+             complete success error complete-after]
+      :or   {method   "GET"
+             retries  0}}]
   (let [headers (if json (assoc headers "Content-Type" "application/json")
                     headers)
         content (if json
