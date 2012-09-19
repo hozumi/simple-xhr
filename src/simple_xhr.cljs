@@ -50,7 +50,7 @@
         content (if json
                   (-> json clj->js gjson/serialize) content)]
     (.send xhr-manager
-           id
+           (or id url)
            url
            method
            content
