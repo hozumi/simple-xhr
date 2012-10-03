@@ -26,8 +26,8 @@
   (atom (goog.net.XhrManager. js/undefined
                               js/undefined
                               js/undefined
-                              0
-                              30000)))
+                              js/undefined
+                              js/undefined)))
 
 (defn request
   "Asynchronously make a network request for the resource at url. If
