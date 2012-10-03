@@ -22,13 +22,12 @@
     (coll? x) (apply array (map clj->js x))
     :else x))
 
-(def ^:private
-  xhr-manager
-  (goog.net.XhrManager. js/undefined
-                        js/undefined
-                        js/undefined
-                        0
-                        30000))
+(def xhr-manager
+  (atom (goog.net.XhrManager. js/undefined
+                              js/undefined
+                              js/undefined
+                              0
+                              30000)))
 
 (defn request
   "Asynchronously make a network request for the resource at url. If
@@ -49,7 +48,7 @@
                     headers)
         content (if json
                   (-> json clj->js gjson/serialize) content)]
-    (.send xhr-manager
+    (.send @xhr-manager
            (or id url)
            url
            method
