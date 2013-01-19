@@ -1,4 +1,4 @@
-(defproject simple-xhr "0.1.2"
+(defproject simple-xhr "0.1.3"
   :description "Make a simple ajax request in ClojureScript"
   :url "https://github.com/hozumi/simple-xhr"
   :license {:name "Eclipse Public License"
